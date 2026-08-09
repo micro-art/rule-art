@@ -3,7 +3,7 @@ name: Build rule sets
 on:
   push:
     branches:
-      - release
+      - main
     paths:
       - 'src/**'
       - 'scripts/build.mjs'
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: build-rule-sets-release
+  group: publish-rule-sets-release
   cancel-in-progress: false
 
 jobs:
@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out release
+      - name: Check out main
         uses: actions/checkout@v7
         with:
-          ref: release
+          ref: main
           fetch-depth: 0
 
       - name: Set up Node.js
@@ -36,9 +36,23 @@ jobs:
       - name: Build rule sets
         run: node scripts/build.mjs
 
-      - name: Commit generated rule sets
+      - name: Publish generated rule sets to release
         shell: bash
         run: |
+          build_output="$RUNNER_TEMP/rule-art-dist"
+          mv dist "$build_output"
+
+          if git ls-remote --exit-code --heads origin release; then
+            git fetch origin release
+            git switch --create release --track origin/release
+          else
+            git switch --orphan release
+            git rm --recursive --force .
+          fi
+
+          rm --recursive --force dist
+          mkdir dist
+          cp --archive "$build_output/." dist/
           git add --force --all dist
 
           if git diff --cached --quiet; then

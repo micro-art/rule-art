@@ -1,19 +1,8 @@
-DOMAIN-SUFFIX,apple-tv-plus-press.apple.com
 DOMAIN-SUFFIX,apple.com.akadns.net
 DOMAIN-SUFFIX,appleworldwidedeveloper.hb-api.omtrdc.net
 DOMAIN-SUFFIX,appleworldwidedeveloper.sc.omtrdc.net
 DOMAIN-SUFFIX,configuration-lb.ls-apple.com.akadns.net
-DOMAIN-SUFFIX,hls-amt.itunes.apple.com
-DOMAIN-SUFFIX,hls.itunes.apple.com
-DOMAIN-SUFFIX,np-edge.itunes.apple.com
-DOMAIN-SUFFIX,play-edge.itunes.apple.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
-DOMAIN-SUFFIX,time.apple.com
-DOMAIN-SUFFIX,time.asia.apple.com
-DOMAIN-SUFFIX,time.euro.apple.com
-DOMAIN-SUFFIX,tv.apple.com
-DOMAIN-SUFFIX,tv.applemusic.com
-DOMAIN-SUFFIX,uts-api.itunes.apple.com
 DOMAIN-SUFFIX,1-apple.com.tw
 DOMAIN-SUFFIX,apple
 DOMAIN-SUFFIX,apple-cloudkit.com
@@ -214,7 +203,6 @@ DOMAIN-SUFFIX,applemusic.hamburg
 DOMAIN-SUFFIX,applemusic.wang
 DOMAIN-SUFFIX,applemusicconnect.com
 DOMAIN-SUFFIX,applemusicfestival.com
-DOMAIN-SUFFIX,applemx-icloud.com
 DOMAIN-SUFFIX,applenews.berlin
 DOMAIN-SUFFIX,applenews.hamburg
 DOMAIN-SUFFIX,applenews.tv

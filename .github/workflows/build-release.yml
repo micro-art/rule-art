@@ -47,7 +47,7 @@ jobs:
             git switch --create release --track origin/release
           else
             git switch --orphan release
-            git rm --force -r .
+            git rm --force -r --ignore-unmatch -- .
           fi
 
           rm --recursive --force dist

@@ -1,0 +1,64 @@
+name: Publish generated rule sets
+
+on:
+  workflow_call:
+    inputs:
+      source-ref:
+        description: Commit or branch containing the source rules to build.
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-rule-sets-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source rules
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.source-ref }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Build rule sets
+        run: node scripts/build.mjs
+
+      - name: Publish generated rule sets to release
+        shell: bash
+        run: |
+          build_output="$RUNNER_TEMP/rule-art-dist"
+          mv dist "$build_output"
+
+          if git ls-remote --exit-code --heads origin release; then
+            git fetch origin release
+            git switch --create release --track origin/release
+          else
+            git switch --orphan release
+            git rm --force -r --ignore-unmatch -- .
+          fi
+
+          rm --recursive --force dist
+          mkdir dist
+          cp --archive "$build_output/." dist/
+          git add --force --all dist
+
+          if git diff --cached --quiet; then
+            echo "Generated rule sets are already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: build rule sets"
+          git push origin HEAD:release

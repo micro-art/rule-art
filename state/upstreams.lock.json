@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "upstreams": {
+    "loyalsoldier": {
+      "repository": "Loyalsoldier/domain-list-custom",
+      "branch": "release",
+      "revision": "c90a302256841796bc93295d2cf2b56af41cd8f5",
+      "targets": {
+        "category-ads-all": {
+          "remoteFile": "category-ads-all.txt",
+          "contentFingerprint": "a7182fc169974193645c0550c85711ae8a06511e7323b85a53069aa9964b6b60",
+          "regexCount": 1,
+          "regexFingerprint": "8015d220ce0a9e47f6fa167dd1cc0570a88d24b2d672cd5f2e7d91eb6235f72e",
+          "ruleCount": 890
+        },
+        "geolocation-not-cn": {
+          "remoteFile": "geolocation-!cn.txt",
+          "contentFingerprint": "833e6e62e05566ea99ec4c1ef78b0a0ae7e9fec98a153ae6769c6133ab3c3fb5",
+          "regexCount": 152,
+          "regexFingerprint": "c369c6fb8936e78ee0a806dd925d75dd14b2cdce258ee83d10e69f400934689a",
+          "ruleCount": 23998
+        }
+      }
+    }
+  }
+}

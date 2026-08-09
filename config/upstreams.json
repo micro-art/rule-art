@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "upstreams": [
+    {
+      "id": "loyalsoldier",
+      "repository": "Loyalsoldier/domain-list-custom",
+      "branch": "release",
+      "targets": [
+        {
+          "id": "category-ads-all",
+          "remoteFile": "category-ads-all.txt",
+          "destination": "rj",
+          "managedBlock": "loyalsoldier/category-ads-all"
+        },
+        {
+          "id": "geolocation-not-cn",
+          "remoteFile": "geolocation-!cn.txt",
+          "destination": "pr",
+          "managedBlock": "loyalsoldier/geolocation-not-cn",
+          "verifyWith": "gfwlist.txt"
+        }
+      ]
+    }
+  ],
+  "ownerOrder": [
+    "ic",
+    "ap",
+    "gl",
+    "oai",
+    "gh",
+    "ft",
+    "yh",
+    "adb",
+    "rj",
+    "pr",
+    "di"
+  ],
+  "strictIsolation": true,
+  "removalReports": [
+    {
+      "removedOwner": "di",
+      "priorityOwners": [
+        "ic",
+        "ap",
+        "gl",
+        "oai",
+        "gh",
+        "ft",
+        "yh",
+        "adb",
+        "rj",
+        "pr"
+      ],
+      "report": "reports/di-overlap-removals.md"
+    }
+  ]
+}

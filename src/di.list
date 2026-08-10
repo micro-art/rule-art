@@ -11184,8 +11184,8 @@ DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,aliappcdn.com
 DOMAIN-SUFFIX,alibaba
 DOMAIN-SUFFIX,alibaba-inc.com
-DOMAIN-SUFFIX,alibaba.net
 DOMAIN-SUFFIX,alibaba.com
+DOMAIN-SUFFIX,alibaba.net
 DOMAIN-SUFFIX,alibabacapital.com
 DOMAIN-SUFFIX,alibabachengdun.net
 DOMAIN-SUFFIX,alibabacorp.com
@@ -50566,6 +50566,7 @@ DOMAIN-SUFFIX,ipgoal.com
 DOMAIN-SUFFIX,ipguishu.com
 DOMAIN-SUFFIX,iphonediule.com
 DOMAIN-SUFFIX,ipin.com
+DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,ipingyao.com
 DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,ipjingling.com

@@ -4533,6 +4533,7 @@ DOMAIN-SUFFIX,cdpwu.org
 DOMAIN-SUFFIX,cdw.com
 DOMAIN-SUFFIX,cebay.com
 DOMAIN-SUFFIX,cecc.gov
+DOMAIN-SUFFIX,makerworld.com
 DOMAIN-SUFFIX,ceicdata.com
 DOMAIN-SUFFIX,celebforum.co
 DOMAIN-SUFFIX,celebgramme.com

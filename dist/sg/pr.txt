@@ -6506,6 +6506,7 @@ DOMAIN-SUFFIX,drobbox.pro
 DOMAIN-SUFFIX,drom.ru
 DOMAIN-SUFFIX,dronedj.com
 DOMAIN-SUFFIX,dropbooks.tv
+DOMAIN-SUFFIX,dropbox.com
 DOMAIN-SUFFIX,dropbox-dns.com
 DOMAIN-SUFFIX,dropbox.tech
 DOMAIN-SUFFIX,dropboxapi.com
